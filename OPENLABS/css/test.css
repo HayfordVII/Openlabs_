@@ -1,0 +1,270 @@
+/* Introduction */
+.display-1 {
+    position: relative;
+    padding-top: 350px;
+    padding-left: 60px;
+    word-spacing: 2rem;
+	font-weight: 600;
+	color: #fff;
+	font-family: "Heavitas" , "sans serif";
+}
+
+.hero .display-1 h1{
+    font-size: 40px;
+}
+
+#learn {
+	position: relative;
+	background: goldenrod;
+	color: #131313;
+    text-decoration: none;
+	font-size: 20px;
+	font-weight: 500;
+    margin-top: 20px;
+    margin-left: 60px;
+	border-radius: 6px;
+	border: 2px solid goldenrod;
+	transition: all 0.3s ease;
+}
+
+#learn:hover{
+	color: goldenrod;
+	background: none;
+}
+
+
+
+
+
+
+
+/* services section */
+.services {
+    font-family: "Dosis Medium", sans-serif;
+}
+
+
+
+section .title {
+	position: relative;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 500;
+	margin-bottom: 60px;
+	padding-bottom: 20px;
+	font-family: "Dosis Medium", sans-serif ;
+	
+}
+
+section .title::before{
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	width: 180px;
+	height: 3px;
+	background: #111;
+	transform: translateX(-50%) ;
+}
+
+section  .title::after{
+    position: absolute;
+	bottom: -12px;
+	left: 50%;
+    padding: 5px;
+	font-size: 20px;
+	color: goldenrod;
+	padding: 5px;
+	background: #fff;
+	transform: translateX(-50%) ;
+}
+
+.services  .title::after{
+	content: "what we offer";
+}
+
+.carrer .title::after{
+    content: '';
+}
+
+
+.services .services-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services .services-content .left{
+    width: 50%;
+}
+
+.overlay {
+	position: absolute;
+}
+
+.services .services-content .left img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+	position: relative;
+	left: 80px;    
+}
+
+.services .services-content .right {
+    width: 50%;
+}
+
+.services .services-content .right p{
+    text-align: justify;
+	position: relative;
+	top: -45px;
+	font-size: large;
+	word-spacing: 15px;
+
+}
+
+.services .services-content .right h4{
+	position: relative;
+	top: -20px;
+    font-size: large;
+}
+
+.services .services-content .right ul{
+	position: relative;
+	top: -20px;
+	word-spacing: 7px;
+    font-size: large;
+}
+
+
+/* Carrer section */
+.contain {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contain .card{
+    position: relative;
+    margin: 0.8em;
+    background: black ;
+}
+
+.card::before,
+.card::after{
+    content: '';
+    position: absolute;
+    top: 1.25em;
+    bottom: 1.25em;
+    left: 1.25em;
+    right: 1.25em;
+    opacity: 1;
+    cursor: pointer;
+    transition: transform ease-out 250ms;
+}
+  
+.card::before{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: scale(0,1);
+}
+  
+.card::after {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    transform: scale(1,0);
+}
+  
+.card:hover::before {
+    transform: scale(1.05, 1);
+}
+  
+.card:hover::after {
+    transform: scale(1, 1.05);
+}
+
+
+
+.card__img {
+    max-width: 100%;
+    display: block;
+    transition: opacity ease-out 250ms;
+    height: 200px;
+    width: 300px;
+    
+}
+
+.card:hover .card__img {
+    opacity: .4;
+}
+  
+
+.card__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0.1;
+    cursor: pointer;
+    transition: opacity ease-out 250ms;
+
+}
+
+.card__text a{
+    text-decoration: none;
+}
+
+.card:hover .card__text {
+    opacity: 1;
+}
+  
+.card__title {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 960px) {
+    .display-1 {
+        padding-left: 20px;
+        font-weight: 500;
+     
+    }
+    
+    .hero .display-1 h1{
+        font-size: 40px;
+    }
+    .services .services-content {
+        display: block;
+
+    }
+     
+    .services .services-content .left{
+        
+        display: none;
+    }
+    
+    
+    .services .services-content .right {
+        padding: 3px;
+        width: 100%;
+    }
+
+    .hero .display-1 h1{
+		position: relative;
+		top: -20px;
+		font-size: smaller;
+	}
+
+	.btn {
+		position: relative;
+		top: -20px;
+	}
+}
+
+
